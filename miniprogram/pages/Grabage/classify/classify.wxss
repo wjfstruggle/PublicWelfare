@@ -1,0 +1,128 @@
+.classify {
+    padding: 20px;
+    width: 600rpx;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+.h1-name {
+    color: #fff;
+    text-align: center;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-bottom: 30rpx;
+    width: 100%;
+    display: block;
+    border-radius: 10rpx;
+}
+.classify-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.classify-img{
+    width: 600rpx;
+    height: 300rpx;
+    margin-right: 40rpx;
+}
+.classify-name {
+    display: flex;
+    flex-direction: column;
+}
+.classify-name .name, .action .action-h2 {
+    margin-bottom: 30rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 30rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+.action .action-h2 {
+    margin-top: 20rpx;
+    border-radius: 10rpx;
+}
+.classify-name .content{
+    font-size: 26rpx;
+}
+.action-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20rpx;
+}
+.action-item{
+    margin-left: 20rpx;
+    font-size: 26rpx;
+}
+.btn-view{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .btn-commit{
+    background-color:#07C160;
+    color: white; 
+    font-weight: bold;
+    width: 210rpx;
+    height: 210rpx;
+    line-height: 210rpx;
+    text-align: center;
+    border-radius: 50%;
+  }
+  .btn-view .find{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 190rpx;
+    height: 190rpx;
+    padding: 20rpx;
+    background: #00cc77;
+    border-radius: 50%;
+  }
+  .btn-view .find image {
+      margin: 0 auto;
+      width: 100rpx;
+      height: 100rpx;
+  }
+  .btn-view .find text {
+    color: #fff;
+    font-size: 26rpx;
+  }
+  @-webkit-keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  
+  .flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+  }
+  .animated {
+    animation-duration:6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }

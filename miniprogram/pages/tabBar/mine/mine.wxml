@@ -1,0 +1,62 @@
+<view class="mine">
+    <view class="avatar">
+        <image src="{{userInfo.avatarUrl}}" />
+        <view class="descname">
+            <view class="wcname">
+                <text class="name">{{userInfo.nickName}}</text>
+            </view>
+            <button>{{punch}}</button>
+        </view>
+    </view>
+    <view class="base-info">
+        <view class="punch">
+            <text class="num">3</text>
+            <text class="keep">已连续打卡</text>
+        </view>
+        <view class="punch">
+            <text class="num">3</text>
+            <text class="keep">我收藏的</text>
+        </view>
+        <view class="punch">
+            <text class="num">3</text>
+            <text class="keep">我点赞的</text>
+        </view>
+    </view>
+    <view class="vip">
+        <view class="upVIP">
+            <image src="../../../img/vip.png" style="width:60rpx;height:60rpx;" />
+            <text>升级为VIP</text>
+        </view>
+        <image style="width:50rpx;height:50rpx;" src="../../../img/arrow-right.png" />
+    </view>
+    <view class="content-mid">
+        <view class="qiandao">
+            <text class="publish">我发布的</text>
+            <image style="width:50rpx;height:50rpx;" src="../../../img/arrow-right.png" />
+        </view>
+        <view class="qiandao">
+            <text class="publish">每日签到</text>
+            <image style="width:50rpx;height:50rpx;" src="../../../img/arrow-right.png" />
+        </view>
+        <view class="qiandao">
+            <text class="publish">我的积分商城</text>
+            <image style="width:50rpx;height:50rpx;" src="../../../img/arrow-right.png" />
+        </view>
+        <view class="qiandao">
+            <text class="publish">我的称号</text>
+            <image style="width:50rpx;height:50rpx;" src="../../../img/arrow-right.png" />
+        </view>
+        <view class="qiandao">
+            <text class="publish">功能性提示</text>
+            <image style="width:50rpx;height:50rpx;" src="../../../img/arrow-right.png" />
+        </view>
+        <view class="qiandao">
+            <text class="publish">新手指引</text>
+            <image style="width:50rpx;height:50rpx;" src="../../../img/arrow-right.png" />
+        </view>
+        <view class="qiandao">
+            <text class="publish">宣传</text>
+            <image style="width:50rpx;height:50rpx;" src="../../../img/arrow-right.png" />
+        </view>
+    </view>
+</view>

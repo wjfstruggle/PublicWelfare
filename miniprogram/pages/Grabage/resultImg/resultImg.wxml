@@ -1,0 +1,28 @@
+<block wx:if="{{isHasData}}">
+  <view class="filter-view" wx:for="{{dataResult}}" wx:key bindtap="toClassify" data-index="{{index}}">
+    <view class="item-view item-o bg-white" wx:if="{{index%2==0}}">
+      <text>{{item.name}}</text>
+      <text wx:if="{{item.sortId==1}}" class="sortId_text">可回收垃圾</text>
+      <text wx:elif="{{item.sortId==2}}" class="sortId_text">有害垃圾</text>
+      <text wx:elif="{{item.sortId==3}}" class="sortId_text">湿垃圾</text>
+      <text wx:else="{{item.sortId==4}}" class="sortId_text">干垃圾</text>
+    </view>
+    <view class="item-view item-ji bg-grey" wx:else>
+      <text>{{item.name}}</text>
+      <text wx:if="{{item.sortId==1}}" class="sortId_text">可回收垃圾</text>
+      <text wx:elif="{{item.sortId==2}}" class="sortId_text">有害垃圾</text>
+      <text wx:elif="{{item.sortId==3}}" class="sortId_text">湿垃圾</text>
+      <text wx:else="{{item.sortId==4}}" class="sortId_text">干垃圾</text>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="no-view">
+    <image class="no-img" src="../../../img/noresult.png"></image>
+    <text class="content">您识别的图片不是垃圾</text>
+    <view class="btn-view">
+      <view class="btn-commit" bindtap="onGoHome">返回首页</view>
+      <!-- <view class="btn-commit" bindtap="commit"> 去提交</view> -->
+    </view>
+  </view>
+</block>

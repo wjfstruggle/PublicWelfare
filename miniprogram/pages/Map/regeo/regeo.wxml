@@ -1,0 +1,12 @@
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}"></map>
+</view>
+<view class="map_text">
+  <block wx:for="{{pois}}" wx:for-item="poi" wx:key="poi">
+    <view class="address-box" bind:tap="toPublishMsg" data-index="{{index}}">
+      <icon size="15" class="icon" type="search" />
+      <text class="address">{{poi.address}}</text>
+      <text class="name">{{poi.name}}</text>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,3 @@
+<template name="border">
+    <view class='border'></view>
+</template>

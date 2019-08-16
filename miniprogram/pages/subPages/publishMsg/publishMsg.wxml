@@ -1,0 +1,51 @@
+<view class="publishMsg">
+    <view class="detailaddr">
+        <image class="icon" src="../../../img/map-icon.png" />
+        <text class="detailaddr-h1">{{PublishMsg.name}}</text>
+    </view>
+    <view class="detailaddr">
+        <input class="inputAddr" type="text" bindinput="inputAddr" placeholder="请输入详细卫生间地址" placeholder-style="color:#ccc" />
+    </view>
+    <view class="wcdesc">
+        <textarea bindinput="inputTextDesc" placeholder="卫生间描述" placeholder-style="color:#ccc" ></textarea>
+    </view>
+    <view class="types">
+        <view class="wctypes">
+            <image src="../../../img/nature.png" />
+            <text>厕所性质</text>
+        </view>
+        <radio-group bindchange="radioChange">
+            <label wx:for="{{WCtypes}}" wx:for-item="item" wx:key="{{item.id}}">
+                <radio value="{{item.value}}" checked="{{item.checked}}" />
+                {{item.value}}
+            </label>
+        </radio-group>
+    </view>
+    <view class="types">
+        <view class="wcfacility wctypes">
+            <image src="../../../img/facility.png" />
+            <text>配套施舍</text>
+        </view>
+        <checkbox-group bindchange="checkboxChange">
+            <label wx:for="{{WCfacility}}" wx:for-item="item" wx:key="{{item.id}}">
+                <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+                {{item.value}}
+            </label>
+        </checkbox-group>
+    </view>
+    <view class="img-box">
+        <scroll-view scroll-x="{{true}}">
+        <view wx:for="{{tempFilePaths}}" wx:key="item" class="img-item">
+            <image src="{{item}}" />
+        </view>
+    </scroll-view>
+    </view>
+    <button class="addImg" bind:tap="doUpload">添加图片</button>
+    <text class="info">*请上传少于3张厕所信息图片</text>
+    <button class="submit-btn" bind:tap="submit">确认发布</button>
+</view>
+<view class="isSubmit" wx:if="{{isSubmit}}">
+    <icon type="success" size="120" />
+    <view class="success-text">提交成功</view>
+    <button bind:tap="toIndex" class="success-btn">返回首页</button>
+</view>

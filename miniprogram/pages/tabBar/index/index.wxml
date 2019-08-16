@@ -1,0 +1,48 @@
+<!-- index.wxml -->
+<view wx:if="{{isHide}}">
+  <view wx:if="{{canIUse}}">
+    <view class='header'>
+      <image src='/img/wx_login.png'></image>
+    </view>
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+<view wx:else>
+  <view class="container">
+    <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" easing-function="{{easingFunction	}}" style="height:380rpx;">
+      <block wx:for="{{imgUrls}}" wx:key="item">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="findWC">
+      <view class="find" bindtap="findWC">
+        <image class="find-img " src="../../../img/search_a.png" />
+        <button style="color:#E74A4A;">寻找厕所</button>
+      </view>
+      <view class="publish" bindtap="publishMsg">
+        <image class="publish-img " src="../../../img/publish.png" />
+        <button style="color:#0B406B;">一键发布</button>
+      </view>
+    </view>
+    <view class="findWC">
+      <view class="find" bind:tap="GarbageIdenty">
+        <image class="find-img " src="../../../img/classify-icon.png" />
+        <button style="color:#07C160;">垃圾识别</button>
+      </view>
+      <view class="publish" bind:tap="Tolottery">
+        <image class="publish-img " src="../../../img/draw-icon.png" />
+        <!-- <image class="publish-img " src="../../../img/2e2bf338bfd6ce6cff54c2c29601b9d9.jpg" /> -->
+        <button style="color:#E89737;">一键抽奖</button>
+      </view>
+    </view>
+  </view>
+</view>

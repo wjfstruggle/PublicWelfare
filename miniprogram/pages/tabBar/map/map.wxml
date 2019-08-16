@@ -1,0 +1,15 @@
+<!--pages/map/map.wxml-->
+<view class="section">
+  <input data-city="{{city}}" data-longitude="{{longitude}}" data-latitude="{{latitude}}" bindtouchstart="bindInput" placeholder="搜索"/>
+</view>
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" controls="{{controls}}" markers="{{markers}}" bindmarkertap="makertap" bindcontroltap="markOrign"></map>
+</view>
+<view class="map_text">
+  <text class="h1">{{textData.name}}</text>
+  <text>{{textData.desc}}</text>
+  <view class="map-1" bindtap="getRoute">
+    <image src="../../../img/route.png"></image>
+    <view>路线</view>
+  </view>
+</view>

@@ -1,0 +1,76 @@
+<wxs module="commentsUser" src="./uesrId.wxs"></wxs>
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}"></map>
+</view>
+<view class="map_text">
+  <text class="h1">{{textData.name}}</text>
+  <text class='desc'>{{toilet.address}}</text>
+  <view class="nav" bind:tap="towalk">
+    <image class="nav-img animated flash" src="../../../img/nav.png" />
+  </view>
+</view>
+<view class="user-info">
+  <view class="avatar">
+    <view class="avatar-user">
+      <image class="avatar-img" src="{{userData.wxPhoto}}" style="width:90rpx;height:90rpx;" />
+      <view class="totalstar">
+        <text class="name">{{userData.wxName}}</text>
+        <view class="box">
+          <star total="{{total}}" num="{{num}}"></star>
+        </view>
+      </view>
+    </view>
+    <view class="like-info" bind:tap="like">
+      <image wx:if="{{isLike}}" class="like" src="../../../img/like-active.png" style="width:50rpx;height:50rpx;" />
+      <image wx:else class="like" src="../../../img/like.png" style="width:50rpx;height:50rpx;" />
+      <text class="likeCount">{{likeCount}}</text>
+    </view>
+  </view>
+  <!-- 发表时间 -->
+  <view class="time">发表于 {{createTime}}</view>
+  <view class="desc">
+    <view class="desc-1" style="display: flex;flex-direction: row;align-items: center;">
+      <image src="../../../img/desc.png" style="width:50rpx;height:50rpx;" />
+      <text>卫生间描述:</text>
+    </view>
+    <text class="desc-2">{{toilet.description}}</text>
+  </view>
+</view>
+<!-- 评论列表 -->
+<view class="review-wrap"  wx:for="{{reviewList}}" wx:key="index">
+  <image class="avatar-img" src="{{userInfo.avatarUrl}}" style="width:90rpx;height:90rpx;" />
+  <view class="content-wrap">
+    <text class="name">{{userInfo.nickName}}</text>
+    <view class="content-list">
+      <text class="content">{{item.content}}</text>
+      <text class="createTime">{{item.createTime}}</text>
+    </view>
+  </view>
+</view>
+<view class="star-wrap">
+  <view class="header-name">您的评价将决定该用户的江湖地位，请认真对待~</view>
+  <view class="line">
+    <text class="lin1"></text>
+    <text class="text-score">星级评分</text>
+    <text class="lin1"></text>
+  </view>
+  <view class="star">
+    <block wx:for="{{full_star}}" wx:key="index">
+      <image catch:tap="star" id="{{index+1}}" data-in="starId_1" src="../../../img/star-full.png" style="width:60rpx;height:60rpx;margin:0 6px;" />
+    </block>
+        <block wx:for="{{empty_star}}" wx:key="index">
+      <image catch:tap="star" id="{{index+1}}" data-in="starId_2" src="../../../img/star-empty.png" style="width:60rpx;height:60rpx;margin:0 6px;" />
+    </block>
+  </view>
+</view>
+<view class="comment-box">
+  <textarea bindinput="reviewInfo" class="comment-info" wx:if="{{isCommit}}" placeholder="说点什么吧..."></textarea>
+</view>
+<view class="btn-commit">
+  <button class="comment" bind:tap="commit">提交评价</button>
+</view>
+<view class="isSubmit" wx:if="{{isSubmit}}">
+    <icon type="success" size="120" />
+    <view class="success-text">提交成功</view>
+    <button bind:tap="toIndex" class="success-btn">返回首页</button>
+</view>

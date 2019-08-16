@@ -1,0 +1,156 @@
+.camera image{
+    margin: 20rpx auto;
+    display: block;
+}
+.camera{
+    text-align: center;
+}
+.camera .textname{
+    font-size: 30rpx;
+    padding: 10px;
+}
+.content-info {
+    background: url("http://r.photo.store.qq.com/psb?/V11c07973BqI9b/faz.OgSc0*6ZQnGGFQ4myeJs*DE78FwcJzfDq.bUwRo!/r/dLYAAAAAAAAA") no-repeat;
+    background-size: 100% 250rpx;
+    width: 100%;
+    height: 250rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-info .texth1{
+    font-size: 30rpx;
+}
+.content-info .mark1 {
+    color: #CD152D;
+    font-size: 36rpx;
+}
+.faceNum {
+    color: #CD152D;
+    font-size: 46rpx;
+    margin-bottom: 15px;
+}
+.cu-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1110;
+	opacity: 0;
+	outline: 0;
+	text-align: center;
+	-ms-transform: scale(1.185);
+	transform: scale(1.185);
+	backface-visibility: hidden;
+	perspective: 2000rpx;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+}
+
+.cu-modal::before {
+	content: "\200B";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.cu-modal.show {
+	opacity: 1;
+	transition-duration: 0.3s;
+	-ms-transform: scale(1);
+	transform: scale(1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+
+.cu-dialog {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width: 380rpx;
+	max-width: 100%;
+	background-color: #f8f8f8;
+	border-radius: 10rpx;
+	overflow: hidden;
+}
+.cu-modal.bottom-modal .cu-dialog {
+	width: 100%;
+    border-radius: 0;
+}
+.cu-dialog .age, .cu-dialog .faceNum-box {
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cu-dialog .age text, .cu-dialog .faceNum-box text {
+    color: #07C160;
+    font-weight: bold;
+    font-size: 40rpx;
+}
+.cu-modal.bottom-modal {
+	margin-bottom: -1000rpx;
+}
+
+.cu-modal.bottom-modal.show {
+	margin-bottom: 0;
+}
+
+.cu-modal.drawer-modal {
+	transform: scale(1);
+	display: flex;
+}
+
+.cu-modal.drawer-modal .cu-dialog {
+	height: 100%;
+	min-width: 200rpx;
+	border-radius: 0;
+	margin: initial;
+	transition-duration: 0.3s;
+}
+
+.cu-modal.drawer-modal.justify-start .cu-dialog {
+	transform: translateX(-100%);
+}
+
+.cu-modal.drawer-modal.justify-end .cu-dialog {
+	transform: translateX(100%);
+}
+
+.cu-modal.drawer-modal.show .cu-dialog {
+	transform: translateX(0%);
+}
+.confirm{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	top: -200px;
+}
+.confirm button{
+	width:120px;
+	height:80rpx;
+	line-height:80rpx;
+	color:#fff;
+	font-weight:bold;
+	font-size:32rpx;
+	border-radius:20px;
+}
+.confirm .cancel{
+	background: #E64240;
+}
+.confirm .defineInfo{
+	background: #1A73E8;
+}

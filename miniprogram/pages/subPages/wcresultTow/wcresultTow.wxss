@@ -1,0 +1,261 @@
+.map_container {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.map {
+  width: 100%;
+  height: 680rpx;
+}
+
+.map_text {
+  /* position: absolute; */
+  left: 0;
+  right: 0;
+  bottom: 290rpx;
+  height: 120rpx;
+  background: #fff;
+  padding: 15rpx 15px;
+}
+.h1 {
+  font-size: 15px;
+  display: block;
+}
+.user-info {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar-user .name {
+  margin-left: 8px;
+  font-size: 32rpx;
+}
+
+.avatar .avatar-img {
+  border-radius: 50%;
+}
+.time {
+  color: #444;
+  font-size: 24rpx;
+  margin-top: 4px;
+}
+.like-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.like-info .likeCount {
+  margin-left: 8px;
+  color: #707070;
+  font-size: 28rpx;
+}
+.user-info .desc {
+  display: flex;
+  flex-direction: column;
+  margin-top:14px;
+  border-top:1px solid rgb(224, 224, 224);
+  border-bottom:1px solid rgb(224, 224, 224);
+  padding:8px 0;
+}
+.user-info .desc .desc-1 text {
+  font-size: 28rpx;
+  color: #444;
+  margin-left: 8px;
+}
+.user-info .desc .desc-2{
+  white-space: row;
+  text-indent: 12px;
+  margin-top: 4px;
+  font-size: 26rpx;
+  color: #707070;
+}
+.btn-commit {
+  padding: 15px 15px;
+}
+
+.comment-box {
+  padding: 15px 15px 0 15px;
+}
+
+.comment {
+  width:190rpx;
+height:90rpx;
+line-height:90rpx;
+font-size:30rpx;
+color:#fff;
+background-color:#07C160;
+text-align:center;
+border-radius:50rpx;
+font-weight:bold;
+}
+
+.comment-info {
+  border:2px solid #07C160;
+outline:none;
+width:80%;
+padding-left:8px;
+padding-top:8px;
+font-size:28rpx;
+resize:none;
+line-height:28rpx;
+margin:0 auto;
+
+}
+
+.nav {
+  float: right;
+  background: #fff;
+}
+
+.nav .nav-img {
+  width: 30px;
+  height: 30px;
+}
+.header-name {
+  margin:10px auto;
+  text-align:center;
+}
+.line {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  margin:10px 0px;
+}
+.line .text-score {
+  margin:0 5px;
+}
+.line .lin1 {
+  border: 1px solid rgb(224, 224, 224);
+  width:30%;
+}
+.star{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@-webkit-keyframes flash {
+
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+.animated {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+.box {
+  padding: 0 10rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 22rpx;
+}
+.review-wrap {
+  display: flex;
+  flex-direction: row;
+  margin:20px 15px 15px 15px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+.review-wrap .avatar-img {
+  flex: 0 0 90rpx;
+  border-radius: 50%;
+}
+.review-wrap .content-wrap {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.review-wrap .content-wrap .name {
+  margin-bottom: 15px;
+}
+.content-list {
+  /* display: flex;
+  flex-direction: row; */
+}
+.content-list .content {
+  display: block;
+  white-space: row;
+  font-size: 24rpx;
+  color: #707070;
+}
+.content-list .createTime{
+  font-size: 24rpx;
+  color: #707070;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float: right;
+}
+.isSubmit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  z-index: 10;
+}
+.success-text{
+  font-size: 40rpx;
+  margin: 15px 0;
+}
+.success-btn{
+  background-color:#07C160;
+  color: white; 
+  font-weight: bold;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  margin-top: 80px;
+}

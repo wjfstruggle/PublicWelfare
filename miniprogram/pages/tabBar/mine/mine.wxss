@@ -1,0 +1,113 @@
+@import '../../template/border.wxss';
+
+.mine {
+    display: flex;
+    flex-direction: column;
+    background: rgb(241, 241, 241);
+}
+
+.avatar {
+    padding: 20rpx 30rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    background-color: #07C160;
+}
+.avatar .descname {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.avatar image {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-right: 30rpx;
+}
+.avatar .descname .name {
+    font-size: 28rpx;
+    color: #fff;
+    font-weight: bold;
+    font-size: 36rpx;
+}
+.avatar button{
+    background: #fff;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-radius: 30rpx;
+    padding: 0 18rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.base-info{
+    background: #07C160;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.base-info .punch {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items:center;
+}
+.base-info .num {
+    font-weight: bold;
+    font-size: 30rpx;
+    margin: 8px 0;
+}
+.base-info .keep {
+    font-size: 12px;
+}
+.vip {
+    margin: 0 30rpx;
+    position: relative;
+    top: -40rpx;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20rpx;
+    height:90rpx;
+    line-height:90rpx;
+}
+.vip .upVIP{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.vip .upVIP image {
+    margin-right: 10px;
+}
+.vip .upVIP text {
+    font-size: 28rpx;
+}
+.content-mid{
+    /* padding: 0 30rpx; */
+}
+.qiandao {
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.qiandao .publish {
+    font-size: 28rpx;
+}

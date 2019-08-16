@@ -1,0 +1,35 @@
+.peize {
+    background-size: 100% 100%;
+    width: 100%;
+    height: 500px;
+}
+.prize_1 {
+    background: url('https://m.qpic.cn/psb?/V11c07973BqI9b/CFXYKkTlegcEYN1GvULhO48oSacVGopRIyN7Ao4vNxs!/b/dEkBAAAAAAAA&bo=LgEWAi4BFgIDCSw!&rf=viewer_4') no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 500px;
+}
+.prize_2 {
+    background: url('http://m.qpic.cn/psb?/V11c07973BqI9b/ZOGvriKLMSd2hcTSTuUy1hh*8FaXbEOA6yNWrVKPrJE!/b/dLgAAAAAAAAA&bo=LgEUAi4BFAIDKQw!&rf=viewer_4') no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 500px;
+}
+.prize_3 {
+    background: url('http://m.qpic.cn/psb?/V11c07973BqI9b/Ce7NFdqq8XL*rBX3K0tBiIN6ikyiSrB.W53nPpgCK8I!/b/dLYAAAAAAAAA&bo=LAEYAiwBGAIDKQw!&rf=viewer_4') no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 500px;
+}
+.success-btn{
+    background-color:#07C160;
+    color: white; 
+    font-weight: bold;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 40rpx;
+    margin: 20px auto;
+    text-align: center;
+    width:260rpx;
+}

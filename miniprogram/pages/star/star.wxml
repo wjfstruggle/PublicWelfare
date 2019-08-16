@@ -1,0 +1,4 @@
+<view class='star'>
+  <image class='icon-star' src='../../img/star-full.png' wx:for="{{Anum1}}" wx:key="index"></image>
+  <image class='icon-star' src='../../img/star-empty.png' wx:for="{{Anum2}}" wx:key="index"></image>
+</view>

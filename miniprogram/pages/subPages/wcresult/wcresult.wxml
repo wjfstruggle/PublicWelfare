@@ -1,0 +1,44 @@
+<wxs module="filters" src="./split.wxs"></wxs>
+<wxs module="filtersLab" src="./split.wxs"></wxs>
+<wxs module="labFirst" src="./split.wxs"></wxs>
+<wxs module="random" src="./split.wxs"></wxs>
+<view class="result">
+    <view class="result-info" bind:tap="toResultTow" wx:for="{{toiletTist}}"
+    wx:for-item="toilet" wx:for-index="index" wx:key="pkid" data-pkId="{{toilet.pkId}}" data-toilet="{{toiletTist[index]}}">
+        <!-- 标签 -->
+        <view class="result-top">
+            <view class="types" >
+                <text class="types-one" wx:for="{{filtersLab.toSplitLab(toilet.label)}}"
+             wx:for-item="labelItem" wx:key="id">{{labelItem}}</text>
+            </view>
+            <!-- 距离 -->
+            <view class="distance">
+                <text class="mi">离我 <text>{{toilet.distance}}</text> 米</text>
+            </view>
+        </view>
+        <!-- 图片 -->
+        <!-- <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" easing-function="{{easingFunction	}}" style="height:380rpx;">
+            <block >
+                <swiper-item>
+                    <image src="http://182.92.118.79:8090/portal/showImg?url={{pic}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper> -->
+        <view class="img-box">
+            <scroll-view scroll-x="{{true}}">
+                <view wx:for="{{filters.toSplit(toilet.pictureUrl)}}" 
+            wx:for-item="pic"wx:key="picId" class="img-item">
+                    <image src="http://182.92.118.79:8090/portal/showImg?url={{pic}}" />
+                </view>
+            </scroll-view>
+        </view>
+        <view class="address">
+            <view class="address-info">
+                <image src="../../../img/map-icon.png" style="width:40rpx;height:40rpx" /><text class="addr-info">{{toilet.address+"-"+labFirst.getLab(toilet.label)}}</text>
+            </view>
+            <view class="hot-info">
+                <image src="../../../img/hot.png" style="width:40rpx;height:40rpx" /><text class="hot">热度 {{random.getRandom()}}</text>
+            </view>
+        </view>
+    </view>
+</view>

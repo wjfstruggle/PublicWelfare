@@ -1,0 +1,28 @@
+var filters = {
+  toSplit: function (value) {
+    return value.split(";") //, 图片分割
+  }
+}
+var filtersLab = {
+  toSplitLab: function (value) {
+    return value.split(",") //, 标签分割
+  }
+}
+var labFirst = {
+  getLab: function (value) {
+    var arr = value.split(",")
+    return arr[arr.length-1] //, 获取厕所名
+  }
+}
+// 热度随机数
+var random = {
+  getRandom: function () {
+    return Math.ceil(Math.random()*100) + 100
+  }
+}
+module.exports = {
+  toSplit: filters.toSplit,
+  toSplitLab: filtersLab.toSplitLab,
+  getLab: labFirst.getLab,
+  getRandom: random.getRandom
+}

@@ -1,0 +1,4 @@
+<view wx:if="{{isPrizeFirst}}" class="prize prize_1"></view>
+<view wx:if="{{isPrizeTow}}" class="peize prize_2"></view>
+<view wx:if="{{isPrizeThree}}" class="prize prize_3"></view>
+<button bind:tap="toIndex" class="success-btn">返回首页</button>

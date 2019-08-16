@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/tabBar/index/index",
+    "pages/tabBar/map/map",
+    "pages/Map/inputtips/inputtips",
+    "pages/Map/regeo/regeo",
+    "pages/Map/walk/walk",
+    "pages/Map/walkDetail/walk_detail",
+    "pages/tabBar/mine/mine",
+    "pages/subPages/wcresult/wcresult",
+    "pages/subPages/publishMsg/publishMsg",
+    "pages/template/border",
+    "pages/subPages/wcresultTow/wcresultTow",
+    "pages/Grabage/camera/camera",
+    "pages/Grabage/resultImg/resultImg",
+    "pages/Grabage/classify/classify",
+    "pages/subPages/textCamera/textCamera",
+    "pages/subPages/textRecogned/textRecogned",
+    "pages/subPages/prize/prize"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#07C160",
+    "navigationBarTitleText": "厕所雷达",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#f03d37",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/index/index",
+        "text": "首页",
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/index-active.png"
+      },
+      {
+        "pagePath": "pages/tabBar/map/map",
+        "text": "附近",
+        "iconPath": "img/map.png",
+        "selectedIconPath": "img/map-active.png"
+      },
+      {
+        "pagePath": "pages/tabBar/mine/mine",
+        "text": "我的",
+        "iconPath": "img/mine.png",
+        "selectedIconPath": "img/mine-active.png"
+      }
+    ]
+  }
+}

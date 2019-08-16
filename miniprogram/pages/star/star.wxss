@@ -1,0 +1,10 @@
+.star{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.icon-star{
+  margin: 0 2rpx; 
+  width: 32rpx;
+  height: 32rpx;
+}

@@ -1,0 +1,23 @@
+<view class="classify">
+    <text class="h1-name" style="background-color:{{info.color}}">{{sortIdName.name}}</text>
+    <view class="classify-top">
+        <image class="classify-img" src="{{info.imgURL}}" />
+        <view class="classify-name">
+            <text class="name" style="background-color:{{info.color}}">{{info.name}}</text>
+            <text class="content">{{info.content}}</text>
+        </view>
+    </view>
+    <view class="action">
+        <view class="action-h2" style="background-color:{{info.color}}">{{info.name}}投放要求</view>
+        <view class="action-list" wx:for="{{info.action}}" wx:key="index">
+            <icon size="15" type="success" /><text class="action-item">{{item}}</text>
+        </view>
+    </view>
+</view>
+<view class="btn-view">
+    <view class="btn-commit" bindtap="onGoHome">返回首页</view>
+    <!-- <view class="find" bindtap="find">
+        <text class="btn-nav">寻找附近投放点</text>
+        <image src="../../../img/nav-fff.png" class="flash animated" />
+    </view> -->
+  </view>

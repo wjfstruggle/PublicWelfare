@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "卫生间详情",
+  "usingComponents": {
+    "star": "../../star/star"
+  }
+}

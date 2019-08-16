@@ -1,0 +1,105 @@
+swiper-item {
+    width: 100%;
+    height: 380rpx;
+    overflow: hidden;
+}
+
+.slide-image {
+    width: 100%;
+    height: 380rpx;
+    overflow: hidden;
+}
+
+.result {
+    padding: 30rpx 20rpx;
+    /* border-bottom: 1px solid rgb(224, 224, 224); */
+}
+.result-info {
+    border-bottom: 1px solid rgb(224, 224, 224);
+    margin-bottom: 25px;
+}
+.result-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+.types .types-one{
+    font-size: 24rpx;
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    padding: 8rpx 8rpx;
+    border-radius: 25rpx;
+    margin-right: 4px;
+}
+.types .types-one:nth-child(1){
+    background-color: #FFB401;
+}
+.types .types-one:nth-child(2){
+    background-color: #13D1BE;
+}
+.types .types-one:nth-child(3){
+    background-color: #00A4FF;
+}
+.types .types-one:nth-child(4){
+    background-color: #FDF726;
+}
+.types .types-one:nth-child(5){
+    background-color: #FD5946;
+}
+.distance .mi {
+    font-size: 28rpx;
+}
+.distance .mi text {
+    color: #EF4238;
+}
+.address{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30rpx 0;
+}
+.address .address-info, .address .hot-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.address .address-info text {
+    width: 520rpx;
+    white-space: row;
+}
+.address .address-info text {
+    font-size: 28rpx;
+    color: #8a8a8a;
+}
+.address .hot-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.address .hot-info text{
+    font-size: 24rpx;
+    color: #d81e06;
+    margin-left: 4px;
+}
+.img-box {
+    width: 100%;
+    height: 400rpx;
+    white-space: nowrap;
+}
+.img-box .img-item{
+    display: inline-block;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 400rpx;
+}
+.img-box .img-item image {
+    height: 400rpx;
+    width: 390rpx;
+}

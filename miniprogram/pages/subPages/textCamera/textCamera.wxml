@@ -1,0 +1,42 @@
+<view class="camera">
+    <camera wx:if="{{isCamera}}" device-position="front" flash="off" binderror="error" style="width: 100%; height: 320px;"></camera>
+    <image class="camera-img2" wx:else style="width:100%;height:100%;" mode="widthFix" src="{{imgUrl}}" />
+    <image bindtap="takePhoto" src="../../../img/camera.png" style="width:200rpx;height:200rpx;" />
+    <text class="textname" bind:tap="againTakePhoto">{{cameraText}}</text>
+</view>
+<view class="content-info" wx:if="{{text_isShow}}">
+    <view class="texth1">请点击拍照按钮</view>
+    <text class="texth1">识别字体含有</text>
+    <view class="mid">
+        <text class="mark1">CDC</text>
+        <text class="texth1">或</text>
+        <text class="mark1">中数通</text>
+    </view>
+    <text class="texth1">的图片有机会获得大奖 ！！！</text>
+</view>
+
+<view class="content-info" wx:if="{{face_isShow}}">
+    <view class="faceNum">为颜值打分</view>
+    <text class="texth1">分数越高获奖机会就越大 ！！！</text>
+</view>
+<view class="cu-modal {{isShow?'show':''}}">
+  <view class="cu-dialog">
+      <view class="age">
+          <text >性别</text>
+          <image wx:if="{{face_result.gender.type == 'female'}}" style="width:60rpx;height:60rpx;" src="../../../img/female.png"/>
+          <image wx:if="{{face_result.gender.type == 'male'}}" style="width:60rpx;height:60rpx;" src="../../../img/male.png"/>
+      </view>
+      <view class="faceNum-box">
+          <text class="yanzhi">颜值</text>
+          <text class="num">{{face_result.beauty}}分</text>
+      </view>
+      <view class="faceNum-box">
+          <text class="yanzhi">表情</text>
+          <text class="num">{{face_result.emotion.type}}</text>
+      </view>
+  </view>
+  <view class="confirm">
+      <button class="cancel" bind:tap="cancel">取消</button>
+      <button class="defineInfo" bind:tap="defineInfo">确定</button>
+  </view>
+</view>
